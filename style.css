@@ -99,14 +99,22 @@ p {
 #navbar {
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-pink);
+  background-color: transparent;
   align-items: center;
+  position: fixed;
   padding: 16px;
+  width: 100%;
   color: var(--color-white);
+  transition: all var(--animation-duration) ease-in-ease;
 }
 
 .navbar__menu {
   display: flex;
+}
+
+#navbar.navbar--dark {
+  background-color: var(--color-dark-pink);
+  padding: 8px;
 }
 
 .navbar__logo {
@@ -141,6 +149,7 @@ p {
 /* Home */
 #home {
   padding: 40px;
+  padding-top: 100px;
   background: url(./images/home-background.png) no-repeat center / cover;
   text-align: center;
 }
@@ -494,6 +503,21 @@ p {
 
   .project {
     flex-grow: 1;
+  }
+
+  .work__categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .category__btn {
+    margin-right: 8px;
+    padding: 8px 18px;
+  }
+
+  .category__btn:last-child {
+    margin-right: 0;
   }
 
   .testimonial__avatar {
