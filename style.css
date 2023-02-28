@@ -531,6 +531,10 @@ p {
     display: block;
   }
 
+  .section {
+    padding: 20px;
+  }
+
   .about__majors {
     flex-direction: column;
   }
@@ -551,19 +555,31 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    margin: 40px 10px;
   }
 
   .category__btn {
     margin-right: 8px;
     padding: 8px 18px;
+    width: calc(50% - 8px);
   }
 
-  .category__btn:last-child {
+  .category__btn:nth-child(even) {
     margin-right: 0;
+  }
+
+  .category__btn:nth-child(n+3) {
+    margin-top: 5px;
   }
 
   .testimonial__avatar {
     width: 80px;
     height: 80px;
+  }
+
+  .arrow-up {
+    right: 20px;
+    bottom: 20px;
   }
 }
